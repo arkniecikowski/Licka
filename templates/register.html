@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h1>REJESTRACJA</h1>
+	{% from "includes/_form%}
+	<form method="POST" action="">
+	    <div class="form-group">
+	     {{render_field(form.name, clas_="form-control")}}
+	    </div>
+	    <div class="form-group">
+	     {{render_field(form.password, clas_="form-control")}}
+	    </div>
+	    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+	</form>
+{% endblock content %}

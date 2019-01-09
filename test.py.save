@@ -1,0 +1,17 @@
+﻿from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+	return 'Strona glowa'
+
+@app.route('/hello')
+def hello():
+	return 'ell'
+
+@app.route('/user/<username>')
+def show_user_profile(username):
+	return 'User %s" % username
+if __name__ == "__main__":
+	app.debug = True
+	app.run(host='0.0.0.0',port=5005)
